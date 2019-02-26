@@ -5,7 +5,6 @@ import Professions from '../components/Professions';
 import Friends from '../components/Friends';
 
 export default class Recipe extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { gnome: null, isLoading: true }
@@ -13,8 +12,9 @@ export default class Recipe extends React.Component {
 
   async componentDidMount() {
     let gnome = null;
+    const { match } = this.props;
     try {
-      gnome = await brastlewarkdb.getGnome(this.props.match.params.gnomeId)
+      gnome = await brastlewarkdb.getGnome(match.params.gnomeId);
     } catch (e) {
       gnome = null;
     }

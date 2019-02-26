@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import uid from 'uid';
 
 const Friend = (props) => {
   const { friends } = props;
@@ -8,8 +10,8 @@ const Friend = (props) => {
 
       <div className="steps">
         { friends.map((line, ix) => (
-          <div className="step" key={ix}>
-            <div className="number">{ix+1}</div>
+          <div className="step" key={uid()}>
+            <div className="number">{ix + 1}</div>
             <div className="text">{ line }</div>
           </div>
         )) }
@@ -17,4 +19,12 @@ const Friend = (props) => {
     </div>
   );
 };
+
+Friend.propTypes = {
+  friends: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]).isRequired,
+};
+
 export default Friend;

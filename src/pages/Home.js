@@ -6,7 +6,6 @@ import brastlewarkdb from '../brastlewarkdb-api';
 import Search from '../components/Search';
 
 export default class Home extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { gnomes: null, isLoading: true };
@@ -36,7 +35,7 @@ export default class Home extends React.Component {
         <div className="gnomes">
           { gnomes && gnomes.map(gnome => (
             <Link to={`/detail/${gnome.id}`} className="gnome" key={gnome.id}>
-              <span className="bg" style={ { backgroundImage: `url(${gnome.thumbnail})` } }></span>
+              <span className="bg" style={{ backgroundImage: `url(${gnome.thumbnail})` }} />
               <span className="info">
                 <h2>{ gnome.name }</h2>
               </span>

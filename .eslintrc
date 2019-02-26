@@ -8,7 +8,8 @@
         "it": true,
         "navigator": true,
         "document": true,
-        "window": true
+        "window": true,
+        "fetch": true
     },
     "rules": {
       "max-len": ["warn", 120, 2, {
