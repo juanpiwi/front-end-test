@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         <Helmet>
           <title>Brastlewark</title>
         </Helmet>
-        <div><Search /></div>
+        <div className="HSearch"><Search /></div>
         <div className="gnomes">
           { gnomes && gnomes.map(gnome => (
             <Link to={`/detail/${gnome.id}`} className="gnome" key={gnome.id}>
