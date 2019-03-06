@@ -3,18 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
 
-type Props = {
-  friends: Array<string>,
+type FriendType = {
+  friends: Array<string>
 };
 
-const Friend = (props: Props) => {
+const Friend = (props: FriendType) => {
   const { friends } = props;
   return (
     <div className="friends">
       <h2>Friends</h2>
 
       <div className="steps">
-        { friends.map((line, ix) => (
+        { friends.map((line: string, ix: number) => (
           <div className="step" key={uid()}>
             <div className="number">{ix + 1}</div>
             <div className="text">{ line }</div>

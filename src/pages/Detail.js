@@ -8,17 +8,17 @@ import Friends from '../components/Friends';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 
-type Props = {
-  match: Object,
+type PropsType = {
+  match: Object
 };
 
-type State = {
+type StateType = {
   isLoading: boolean,
-  gnome: Object,
+  gnome: Object
 };
 
-export default class Recipe extends React.Component<Props, State> {
-  constructor(props: Props) {
+export default class Recipe extends React.Component<PropsType, StateType> {
+  constructor(props: PropsType) {
     super(props);
     this.state = { gnome: null, isLoading: true };
   }

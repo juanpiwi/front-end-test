@@ -7,23 +7,18 @@ import brastlewarkdb from '../brastlewarkdb-api';
 import Search from '../components/Search';
 import Error from '../components/Error';
 
-type Props = {};
+type PropsType = {};
 
-type State = {
+type StateType = {
   isLoading: boolean,
-  gnomes: ?$ReadOnlyArray<{id: number, thumbnail: string, name: string}>,
+  gnomes: ?$ReadOnlyArray<{id: number, thumbnail: string, name: string}>
 };
 
-export default class Home extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { gnomes: null, isLoading: true };
-  }
-
-  /* state = {
-    gnomes: null, 
-    isLoading: true
-  }; */
+export default class Home extends React.Component<PropsType, StateType> {
+  state = {
+    gnomes: null,
+    isLoading: true,
+  };
 
   async componentDidMount() {
     let gnomes;
@@ -51,7 +46,7 @@ export default class Home extends React.Component<Props, State> {
         </Helmet>
         <div className="HSearch"><Search /></div>
         <div className="gnomes">
-          { gnomes && gnomes.map(gnome => (
+          { gnomes && gnomes.map((gnome: Object) => (
             <Link to={`/detail/${gnome.id}`} className="gnome" key={gnome.id}>
               <span className="bg" style={{ backgroundImage: `url(${gnome.thumbnail})` }} />
               <span className="info">
