@@ -1,9 +1,17 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 
+type Props = {
+  children: string,
+};
 
-class IfOffline extends React.Component {
-  constructor(props) {
+type State = {
+  onLine: boolean,
+};
+
+class IfOffline extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = { onLine: navigator ? navigator.onLine : true };
   }

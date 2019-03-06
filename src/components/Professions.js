@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
 
-const Profession = (props) => {
+type Props = {
+  professions: Array<string>,
+};
+
+const Profession = (props: Props) => {
   const { professions } = props;
   return (
     <div className="professions">

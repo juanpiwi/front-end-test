@@ -1,15 +1,29 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import brastlewarkdb from '../brastlewarkdb-api';
 
 import Search from '../components/Search';
+import Error from '../components/Error';
 
-export default class Home extends React.Component {
-  constructor(props) {
+type Props = {};
+
+type State = {
+  isLoading: boolean,
+  gnomes: ?$ReadOnlyArray<{id: number, thumbnail: string, name: string}>,
+};
+
+export default class Home extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = { gnomes: null, isLoading: true };
   }
+
+  /* state = {
+    gnomes: null, 
+    isLoading: true
+  }; */
 
   async componentDidMount() {
     let gnomes;
@@ -24,6 +38,10 @@ export default class Home extends React.Component {
 
     if (isLoading) {
       return <div className="message">Cargando...</div>;
+    }
+
+    if (gnomes === null) {
+      return <Error />;
     }
 
     return (

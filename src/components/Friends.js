@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
 
-const Friend = (props) => {
+type Props = {
+  friends: Array<string>,
+};
+
+const Friend = (props: Props) => {
   const { friends } = props;
   return (
     <div className="friends">

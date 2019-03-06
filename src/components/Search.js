@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,9 +7,7 @@ const Search = () => (
     <div className="container">
       <input type="text" placeholder="Search" />
       <Link to="/">
-        <div className="btn-search">
-          
-        </div>
+        <div className="btn-search" />
       </Link>
     </div>
   </div>
