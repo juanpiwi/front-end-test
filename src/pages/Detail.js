@@ -7,6 +7,7 @@ import Professions from '../components/Professions';
 import Friends from '../components/Friends';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
+import '../styles/_detail.scss';
 
 type PropsType = {
   match: Object

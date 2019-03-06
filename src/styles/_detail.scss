@@ -1,0 +1,77 @@
+.Gnome .hero {
+    display: block;
+    height: 30vh;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.Gnome > div {
+    color: #827d92;
+    padding: 20px;
+    margin: 0 0 10px;
+    background: #fff;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+}
+.Gnome > div:nth-of-type(1){
+    margin: 0;
+}
+.Gnome > div:nth-of-type(2){
+    background: #aed3eb;
+}
+.Gnome > div:nth-of-type(3){
+    background: #a5e6c5;
+}
+.Gnome > div:nth-of-type(4){
+    background: #9fdfd5;
+}
+.Gnome .title .info {
+    flex: 1 1 auto;
+}
+.Gnome .title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.Gnome h2 {
+    margin: 0 0 10px;
+}
+.Gnome .title p {
+    line-height: 14px;
+    margin: 0;
+    display: inline-block;
+}
+.Gnome .title p:after{
+    content: '-';
+    display: inline-block;
+    margin: 0 5px;
+}
+.Gnome .title p:last-child:after{
+    content: '';
+}
+.Gnome a.share {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.Gnome .professions {
+    padding: 20px;
+}
+.Gnome .professions li {
+    line-height: 24px;
+}
+.Gnome .friends {
+    padding: 20px;
+}
+.Gnome .step {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.Gnome .step .number {
+    font-size: 18px;
+    flex: 0 1 1.3em;
+}
+.Gnome .step .text {
+    flex: 1 0;
+    font-size: 16px;
+    line-height: 140%;
+}

@@ -5,6 +5,7 @@
   "dependencies": {
     "flow-bin": "^0.94.0",
     "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.11.0",
     "react": "^16.4.1",
     "react-app-rewire-workbox": "^2.0.1",
     "react-app-rewired": "^1.5.2",
@@ -30,6 +31,8 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "react-app-rewire-scss": "^1.0.2",
+    "sass-loader": "^7.1.0"
   }
 }

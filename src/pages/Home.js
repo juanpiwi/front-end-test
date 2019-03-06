@@ -6,6 +6,7 @@ import brastlewarkdb from '../brastlewarkdb-api';
 
 import Search from '../components/Search';
 import Error from '../components/Error';
+import '../styles/_home.scss';
 
 type PropsType = {};
 
