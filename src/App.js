@@ -11,7 +11,7 @@ const App = () => (
     <div>
       <header>
         <Link to="/">
-          Brastlewark
+          Gnomes
           <IfOffline>Offline</IfOffline>
         </Link>
       </header>

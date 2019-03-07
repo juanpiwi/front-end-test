@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 
-const baseUrl = 'https://raw.githubusercontent.com/rrafols/mobile_test/master'
+const baseUrl = 'https://raw.githubusercontent.com/rrafols/mobile_test/master';
 
 const normalizeGnome = (data) => {
   const newGnome = {};

@@ -6,6 +6,7 @@ import brastlewarkdb from '../brastlewarkdb-api';
 
 import Search from '../components/Search';
 import Error from '../components/Error';
+import Loading from '../components/Loading';
 import '../styles/_home.scss';
 
 type PropsType = {};
@@ -33,7 +34,7 @@ export default class Home extends React.Component<PropsType, StateType> {
     const { gnomes, isLoading } = this.state;
 
     if (isLoading) {
-      return <div className="message">Cargando...</div>;
+      return <Loading />;
     }
 
     if (gnomes === null) {
@@ -43,7 +44,7 @@ export default class Home extends React.Component<PropsType, StateType> {
     return (
       <div>
         <Helmet>
-          <title>Brastlewark</title>
+          <title>Gnomes</title>
         </Helmet>
         <div className="HSearch"><Search /></div>
         <div className="gnomes">
