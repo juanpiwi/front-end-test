@@ -22,6 +22,10 @@ Se utilizo Progressive Web App para con ReactJS. Algunas de las features que tie
 * `npm install` para instalar las dependencias
 * `npm run dev` para entorno de desarrollo
 * `npm run build && npm start` para producción
+* `npm test` para tests unitarios
+* `npm run test:coverage` para tests de covertura
+* `npm run lint` para linter de código
+* `npm run flow` para analizador de tipos de JS
 
 ## Licencia
 
