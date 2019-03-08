@@ -8,7 +8,9 @@ Se utilizo Progressive Web App con ReactJS. Algunas de las features que tiene so
 * [Babel](https://babeljs.io)
 * [Eslint](https://eslint.org)
 * [Webpack](https://webpack.js.org)
-* [Flow](https://flow.org/)
+* [Flow](https://flow.org)
+* [Enzyme](https://airbnb.io/enzyme/docs/api)
+* Coverage
 * Creado con [Create React App](https://github.com/facebookincubator/create-react-app)
 
 ## Requerimientos

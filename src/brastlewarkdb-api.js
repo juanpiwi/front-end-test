@@ -7,7 +7,7 @@ const normalizeGnome = (data) => {
 
   newGnome.id = data.id;
   newGnome.name = data.name;
-  newGnome.thumbnail = data.thumbnail;
+  newGnome.thumbnail = data.thumbnail.replace(/^http:\/\//i, 'https://');
   newGnome.professions = data.professions;
   newGnome.friends = data.friends;
   newGnome.age = data.age;
