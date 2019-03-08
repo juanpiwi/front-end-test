@@ -1,6 +1,6 @@
 # Front End (Altran)
 
-![Captura de App](.readme-static/captura.png)
+![Captura de App](.readme-static/captura.png =60x)
 
 Se utilizo Progressive Web App con ReactJS. Algunas de las features que tiene son:
 
