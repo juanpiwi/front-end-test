@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import brastlewarkdb from '../brastlewarkdb-api';
 
-import Search from '../components/Search';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 import '../styles/_home.scss';
@@ -46,7 +45,6 @@ export default class Home extends React.Component<PropsType, StateType> {
         <Helmet>
           <title>Gnomes</title>
         </Helmet>
-        <div className="HSearch"><Search /></div>
         <div className="gnomes">
           { gnomes && gnomes.map((gnome: Object) => (
             <Link to={`/detail/${gnome.id}`} className="gnome" key={gnome.id}>

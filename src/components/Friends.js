@@ -9,6 +9,15 @@ type FriendType = {
 
 const Friend = (props: FriendType) => {
   const { friends } = props;
+
+  if (friends.length === 0) {
+    return (
+      <div className="friends">
+        <h2>Friends</h2>
+        <p>Not friends</p>
+      </div>
+    );
+  }
   return (
     <div className="friends">
       <h2>Friends</h2>

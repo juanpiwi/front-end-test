@@ -1,6 +1,6 @@
 # Front End (Altran)
 
-Se utilizo Progressive Web App para con ReactJS. Algunas de las features que tiene son:
+Se utilizo Progressive Web App con ReactJS. Algunas de las features que tiene son:
 
 * Soporte Offline con Workbox
 * Estrategias de Red apropiadas para cada recurso
