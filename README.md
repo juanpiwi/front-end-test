@@ -29,6 +29,12 @@ Se utilizo Progressive Web App con ReactJS. Algunas de las features que tiene so
 * `npm run lint` para linter de código
 * `npm run flow` para analizador de tipos de JS
 
+## Producción
+
+La Web-App con PWA está en producción con [Now](https://zeit.co/now) con https:
+
+`https://front-end-test-teauxjcoff.now.sh`
+
 ## Licencia
 
 MIT

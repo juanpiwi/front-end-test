@@ -1,6 +1,7 @@
 {
   "name": "front-end-test",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "flow-bin": "0.94.0",
