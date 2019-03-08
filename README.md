@@ -1,5 +1,7 @@
 # Front End (Altran)
 
+![Captura de App](.readme-static/captura.png)
+
 Se utilizo Progressive Web App con ReactJS. Algunas de las features que tiene son:
 
 * Soporte Offline con Workbox
