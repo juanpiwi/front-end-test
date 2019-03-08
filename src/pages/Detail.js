@@ -1,53 +1,49 @@
+// @flow
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
 import brastlewarkdb from '../brastlewarkdb-api';
 import Professions from '../components/Professions';
 import Friends from '../components/Friends';
+import Error from '../components/Error';
+import Loading from '../components/Loading';
+import '../styles/_detail.scss';
 
-export default class Recipe extends React.Component {
+type PropsType = {
+  match: Object
+};
 
-  constructor(props) {
+type StateType = {
+  isLoading: boolean,
+  gnome: Object
+};
+
+export default class Recipe extends React.Component<PropsType, StateType> {
+  constructor(props: PropsType) {
     super(props);
-    this.state = { gnome: null, isLoading: true }
+    this.state = { gnome: null, isLoading: true };
   }
 
   async componentDidMount() {
     let gnome = null;
+    const { match } = this.props;
     try {
-      gnome = await brastlewarkdb.getGnome(this.props.match.params.gnomeId)
+      gnome = await brastlewarkdb.getGnome(match.params.gnomeId);
     } catch (e) {
       gnome = null;
     }
     this.setState({ gnome, isLoading: false });
   }
 
-  compartir = (e) => {
-    e.preventDefault();
-    if (!navigator.share) {
-      alert('Tu browser no soporta la Web Share API'); 
-      return;
-    }
-
-    const { gnome } = this.state;
-
-    navigator.share({
-      title: `${gnome.name}`,
-      text: 'Gnome',
-      url: document.location.href,
-    })
-      .then(() => alert('Contenido compartido!'))
-      .catch((error) => alert('Hubo un error'))
-  }
-
   render() {
     const { gnome, isLoading } = this.state;
 
     if (isLoading) {
-      return <div className="message">Cargando...</div>;
+      return <Loading />;
     }
 
     if (gnome === null) {
-      return <div className="message">Hubo un problema :(</div>;
+      return <Error />;
     }
 
     return (
@@ -66,16 +62,10 @@ export default class Recipe extends React.Component {
             <p>{`Height: ${gnome.height}`}</p>
             <p>{`Hair color: ${gnome.hairColor}`}</p>
           </div>
-          <div>
-            <a className="share" onClick={ this.compartir }>Compartir</a>
-          </div>
         </div>
 
-
         <Professions professions={gnome.professions} />
-
         <Friends friends={gnome.friends} />
-
       </div>
     );
   }

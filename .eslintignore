@@ -1,2 +1,5 @@
 src/service-worker.js
 src/registerServiceWorker.js
+src/brastlewarkdb-api.js
+src/setupTests.js
+config-overrides.js

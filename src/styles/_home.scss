@@ -1,0 +1,58 @@
+.HSearch{
+  padding: 20px 20px 0;
+}
+
+.HSearch input{
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  display: inline-block;
+  padding: 3px 2px;
+}
+
+.HSearch a{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.gnomes {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.gnome {
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+}
+.gnome .bg {
+  display: block;
+  padding-bottom: 40%;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.gnome .info {
+  display: block;
+  padding: 20px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.gnome h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #827d92;
+  margin: 0;
+}

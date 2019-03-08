@@ -1,16 +1,25 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import brastlewarkdb from '../brastlewarkdb-api';
 
-import Search from '../components/Search';
+import Error from '../components/Error';
+import Loading from '../components/Loading';
+import '../styles/_home.scss';
 
-export default class Home extends React.Component {
+type PropsType = {};
 
-  constructor(props) {
-    super(props);
-    this.state = { gnomes: null, isLoading: true };
-  }
+type StateType = {
+  isLoading: boolean,
+  gnomes: ?$ReadOnlyArray<{id: number, thumbnail: string, name: string}>
+};
+
+export default class Home extends React.Component<PropsType, StateType> {
+  state = {
+    gnomes: null,
+    isLoading: true,
+  };
 
   async componentDidMount() {
     let gnomes;
@@ -24,19 +33,22 @@ export default class Home extends React.Component {
     const { gnomes, isLoading } = this.state;
 
     if (isLoading) {
-      return <div className="message">Cargando...</div>;
+      return <Loading />;
+    }
+
+    if (gnomes === null) {
+      return <Error />;
     }
 
     return (
       <div>
         <Helmet>
-          <title>Brastlewark</title>
+          <title>Gnomes</title>
         </Helmet>
-        <div><Search /></div>
         <div className="gnomes">
-          { gnomes && gnomes.map(gnome => (
+          { gnomes && gnomes.map((gnome: Object) => (
             <Link to={`/detail/${gnome.id}`} className="gnome" key={gnome.id}>
-              <span className="bg" style={ { backgroundImage: `url(${gnome.thumbnail})` } }></span>
+              <span className="bg" style={{ backgroundImage: `url(${gnome.thumbnail})` }} />
               <span className="info">
                 <h2>{ gnome.name }</h2>
               </span>
